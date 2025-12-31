@@ -53,7 +53,7 @@ app.get('/contact', (req, res) => {
 });
 
 // API Routes
-app.post('/api/contact', (req, res) => {
+app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
   
   // Basic validation
@@ -73,13 +73,29 @@ app.post('/api/contact', (req, res) => {
     });
   }
   
-  // Here you would typically send an email or save to database
-  // For now, we'll just simulate success
-  console.log('Contact form submission:', { name, email, message });
+  // Log the message (always works)
+  console.log('=== NEW CONTACT FORM SUBMISSION ===');
+  console.log('From:', name);
+  console.log('Email:', email);
+  console.log('Message:', message);
+  console.log('Time:', new Date().toISOString());
+  console.log('=====================================');
   
+  // Try to send email if SendGrid is configured (production only)
+  if (process.env.SENDGRID_API_KEY) {
+    try {
+      // This would require SendGrid package in production
+      // For now, just log that we would send email
+      console.log('Would send email via SendGrid to: info@pinnaclestudio.in');
+    } catch (error) {
+      console.error('Email service error:', error);
+    }
+  }
+  
+  // Always return success to user
   res.json({ 
     success: true, 
-    message: 'Message sent successfully' 
+    message: 'Message received. We\'ll be in touch.' 
   });
 });
 

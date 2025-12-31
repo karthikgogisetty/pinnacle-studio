@@ -98,13 +98,16 @@
             </div>
 
             <div class="bg-card p-8 md:p-12 border border-white/5 animate-in">
-              <form class="space-y-8">
+              <form id="contactForm" class="space-y-8">
                 <div class="space-y-2">
                   <label class="text-xs uppercase tracking-widest text-muted-foreground">Name</label>
                   <input 
                     type="text" 
+                    name="name"
+                    id="name"
                     class="w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors"
                     placeholder="John Doe"
+                    required
                   />
                 </div>
                 
@@ -112,8 +115,11 @@
                   <label class="text-xs uppercase tracking-widest text-muted-foreground">Email</label>
                   <input 
                     type="email" 
+                    name="email"
+                    id="email"
                     class="w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors"
                     placeholder="john@example.com"
+                    required
                   />
                 </div>
                 
@@ -121,18 +127,23 @@
                   <label class="text-xs uppercase tracking-widest text-muted-foreground">Project Details</label>
                   <textarea 
                     rows="4"
+                    name="message"
+                    id="message"
                     class="w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors resize-none"
                     placeholder="Tell us about your vision..."
+                    required
                   ></textarea>
                 </div>
 
                 <button 
-                  type="button"
+                  type="submit"
                   class="w-full bg-white text-black py-6 uppercase font-bold tracking-widest hover:bg-gray-200 transition-colors"
                 >
                   Send Message
                 </button>
               </form>
+              
+              <div id="formMessage" class="mt-4 text-center hidden"></div>
             </div>
           </div>
         </div>
@@ -140,5 +151,6 @@
     </main>
 
     <script src="/js/script.js"></script>
+    <script src="/js/contact.js"></script>
   </body>
 </html>

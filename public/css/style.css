@@ -85,6 +85,19 @@ body {
   position: relative;
 }
 
+/* Mobile Logo - Larger */
+@media (max-width: 768px) {
+  .logo {
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 120px;
+  }
+}
+
 .logo::before {
   content: '';
   position: absolute;
@@ -282,6 +295,19 @@ body {
   z-index: 10;
 }
 
+/* Mobile Projects Section */
+@media (max-width: 768px) {
+  #projects {
+    padding-top: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #projects {
+    padding-top: 6rem;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -319,6 +345,25 @@ body {
   row-gap: 3rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* Mobile Projects Grid */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    row-gap: 2rem;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    gap: 1rem;
+    row-gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
 }
 
 .project-card {
@@ -410,6 +455,22 @@ body {
   transform-style: preserve-3d;
 }
 
+/* Mobile Project Image Container */
+@media (max-width: 768px) {
+  .project-image-container {
+    max-height: 300px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-image-container {
+    max-height: 250px;
+    margin-bottom: 0.75rem;
+    border-radius: 6px;
+  }
+}
+
 .project-image {
   width: 100%;
   height: 100%;
@@ -433,6 +494,22 @@ body {
   transform: translateZ(0);
 }
 
+/* Mobile Project Info */
+@media (max-width: 768px) {
+  .project-info {
+    padding-top: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-info {
+    padding-top: 0.75rem;
+    gap: 0.25rem;
+  }
+}
+
 .project-card:hover .project-info {
   border-top-color: rgba(255, 255, 255, 0.2);
   transform: translateZ(10px);
@@ -448,6 +525,19 @@ body {
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   letter-spacing: 0.02em;
   transform: translateZ(0);
+}
+
+/* Mobile Project Title */
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-title {
+    font-size: 1.1rem;
+  }
 }
 
 .project-card:hover .project-title {
