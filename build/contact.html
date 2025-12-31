@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <meta property="og:title" content="Contact - Pinnacle Design Studio" />
+    <meta property="og:description" content="Get in touch with our architectural studio." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/logo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@replit" />
+    <meta name="twitter:title" content="Contact - Pinnacle Design Studio" />
+    <meta name="twitter:description" content="Get in touch with our architectural studio." />
+    <meta name="twitter:image" content="/images/logo.jpg" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="progress-bar"></div>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="logo-link">
+          <img 
+            src="/images/project2.jpg" 
+            alt="Pinnacle Design Studio" 
+            class="logo"
+          />
+        </a>
+        <div class="nav-menu">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/projects" class="nav-link">Projects</a>
+          <a href="/studio" class="nav-link">Studio</a>
+          <a href="/services" class="nav-link">Services</a>
+          <a href="/contact" class="nav-link active">Contact</a>
+        </div>
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu">
+      <button class="close-btn">&times;</button>
+      <div class="mobile-nav-links">
+        <a href="/" class="mobile-nav-link">Home</a>
+        <a href="/projects" class="mobile-nav-link">Projects</a>
+        <a href="/studio" class="mobile-nav-link">Studio</a>
+        <a href="/services" class="mobile-nav-link">Services</a>
+        <a href="/contact" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+
+    <main class="bg-background min-h-screen text-foreground selection:bg-white selection:text-black">
+      <!-- Contact Section - Exact from Arch-Canvas -->
+      <section id="contact" class="pt-20 pb-32 bg-background relative z-20">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32">
+            <div>
+              <h2 class="text-6xl md:text-8xl font-display uppercase font-bold text-white mb-12 animate-in">
+                Let's<br />Build<br /><span class="text-stroke">Legacy</span>
+              </h2>
+              
+              <div class="space-y-8 animate-in">
+                <div class="flex items-start space-x-4">
+                  <svg class="w-6 h-6 text-white mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <div>
+                    <h4 class="text-white font-medium uppercase tracking-widest mb-2">Email</h4>
+                    <p class="text-muted-foreground underline underline-offset-4 hover:text-white transition-colors">
+                      <a href="mailto:info@pinnaclestudio.in">info@pinnaclestudio.in</a>
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                  <svg class="w-6 h-6 text-white mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <div>
+                    <h4 class="text-white font-medium uppercase tracking-widest mb-2">Phone</h4>
+                    <div class="space-y-1">
+                      <p class="text-muted-foreground underline underline-offset-4 hover:text-white transition-colors">
+                        <a href="tel:+919866559836">+91 98665 59836</a>
+                      </p>
+                      <!-- <p class="text-muted-foreground">+91 95054 50230</p> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-card p-8 md:p-12 border border-white/5 animate-in">
+              <form class="space-y-8">
+                <div class="space-y-2">
+                  <label class="text-xs uppercase tracking-widest text-muted-foreground">Name</label>
+                  <input 
+                    type="text" 
+                    class="w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors"
+                    placeholder="John Doe"
+                  />
+                </div>
+                
+                <div class="space-y-2">
+                  <label class="text-xs uppercase tracking-widest text-muted-foreground">Email</label>
+                  <input 
+                    type="email" 
+                    class="w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors"
+                    placeholder="john@example.com"
+                  />
+                </div>
+                
+                <div class="space-y-2">
+                  <label class="text-xs uppercase tracking-widest text-muted-foreground">Project Details</label>
+                  <textarea 
+                    rows="4"
+                    class="w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors resize-none"
+                    placeholder="Tell us about your vision..."
+                  ></textarea>
+                </div>
+
+                <button 
+                  type="button"
+                  class="w-full bg-white text-black py-6 uppercase font-bold tracking-widest hover:bg-gray-200 transition-colors"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

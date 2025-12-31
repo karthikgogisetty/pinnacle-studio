@@ -4,35 +4,40 @@
 
 @layer base {
   :root {
-    /* Dark Mode Base for that Premium Architect Feel */
     --background: 0 0% 5%;
     --foreground: 0 0% 98%;
     --card: 0 0% 8%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 9%;
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
     --accent: 0 0% 15%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
     --ring: 0 0% 80%;
     --radius: 0rem;
   }
 
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   
   body {
-    @apply font-sans antialiased bg-background text-foreground bg-grid-pattern bg-grid;
+    font-family: "Manrope", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    background-image: 
+      linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
 }
 
@@ -40,117 +45,5 @@
   .text-stroke {
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
     color: transparent;
-  }
-  
-  .progress-bar {
-    @apply fixed top-0 left-0 h-1 bg-foreground z-[1000] origin-left mix-blend-difference;
-    width: 0%;
-  }
-  
-  .navbar {
-    @apply fixed top-0 left-0 right-0 z-[999] transition-all duration-500 border-b border-transparent py-6;
-  }
-  
-  .navbar.scrolled {
-    @apply bg-background/80 backdrop-blur-md border-border py-4;
-  }
-  
-  .nav-container {
-    @apply max-w-7xl mx-auto px-6 flex justify-between items-center;
-  }
-  
-  .logo {
-    @apply h-12 w-auto object-contain transition-transform duration-300;
-    filter: invert(1) brightness(2);
-  }
-  
-  .logo:hover {
-    @apply scale-105;
-  }
-  
-  .nav-menu {
-    @apply hidden md:flex gap-12 items-center;
-  }
-  
-  .nav-link {
-    @apply text-xs uppercase tracking-[0.2em] font-medium text-muted-foreground hover:text-foreground transition-colors relative;
-  }
-  
-  .nav-link::after {
-    content: '';
-    @apply absolute -bottom-1 left-0 h-px bg-foreground transition-all duration-300 w-0;
-  }
-  
-  .nav-link:hover::after,
-  .nav-link.active::after {
-    @apply w-full;
-  }
-  
-  .hamburger {
-    @apply md:hidden flex flex-col bg-none border-none cursor-pointer gap-1 p-0;
-  }
-  
-  .hamburger span {
-    @apply w-6 h-0.5 bg-foreground transition-all duration-300;
-  }
-  
-  .mobile-menu {
-    @apply fixed top-0 left-0 w-full h-screen bg-background flex items-center justify-center z-[998] opacity-0 invisible transition-all duration-300;
-  }
-  
-  .mobile-menu.active {
-    @apply opacity-100 visible;
-  }
-  
-  .close-btn {
-    @apply absolute top-6 right-6 bg-none border-none text-foreground text-2xl cursor-pointer p-2;
-  }
-  
-  .mobile-nav-links {
-    @apply flex flex-col gap-8 text-center;
-  }
-  
-  .mobile-nav-link {
-    @apply text-4xl font-display font-bold uppercase tracking-widest text-foreground hover:text-muted-foreground transition-colors;
-  }
-  
-  .hero {
-    @apply relative h-screen w-full overflow-hidden flex items-center justify-center;
-  }
-  
-  .hero-background {
-    @apply absolute inset-0 z-0;
-  }
-  
-  .hero-overlay {
-    @apply absolute inset-0 bg-black/40 z-10;
-  }
-  
-  .hero-gradient {
-    @apply absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 h-full;
-  }
-  
-  .hero-image {
-    @apply w-full h-full object-cover scale-105;
-  }
-  
-  .hero-content {
-    @apply relative z-20 max-w-7xl mx-auto px-6 text-center;
-  }
-  
-  .hero-text {
-    @apply animate-fade-in-up;
-  }
-  
-  .hero-subtitle {
-    @apply text-sm md:text-base uppercase tracking-[0.5em] text-muted-foreground mb-4 font-extralight;
-  }
-  
-  .hero-title {
-    @apply text-6xl md:text-9xl font-display font-bold text-white uppercase tracking-tight leading-none mb-8;
-  }
-  
-  .hero-description {
-    @apply max-w-xl mx-auto text-muted-foreground text-lg font-light leading-relaxed mb-12;
   }
 }
