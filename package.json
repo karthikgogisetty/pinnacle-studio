@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build-css": "tailwindcss -i ./css/input.css -o ./css/style.css",
-    "build": "npm run build-css"
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "build-css": "tailwindcss -i ./css/input.css -o ./public/css/style.css",
+    "build": "npm run build-css && mkdir -p build && cp -r public/* build/"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.18",
