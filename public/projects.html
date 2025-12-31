@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <meta property="og:title" content="Works - Pinnacle Design Studio" />
+    <meta property="og:description" content="Our portfolio of architectural projects." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/logo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@replit" />
+    <meta name="twitter:title" content="Works - Pinnacle Design Studio" />
+    <meta name="twitter:description" content="Our portfolio of architectural projects." />
+    <meta name="twitter:image" content="/images/logo.jpg" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="progress-bar"></div>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="logo-link">
+          <img 
+            src="/images/project2.jpg" 
+            alt="Pinnacle Design Studio" 
+            class="logo"
+          />
+        </a>
+        <div class="nav-menu">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/projects" class="nav-link active">Projects</a>
+          <a href="/studio" class="nav-link">Studio</a>
+          <a href="/services" class="nav-link">Services</a>
+          <a href="/contact" class="nav-link">Contact</a>
+        </div>
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu">
+      <button class="close-btn">&times;</button>
+      <div class="mobile-nav-links">
+        <a href="/" class="mobile-nav-link">Home</a>
+        <a href="/projects" class="mobile-nav-link">Projects</a>
+        <a href="/studio" class="mobile-nav-link">Studio</a>
+        <a href="/services" class="mobile-nav-link">Services</a>
+        <a href="/contact" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+
+    <main class="bg-background min-h-screen text-foreground selection:bg-white selection:text-black">
+      <!-- Projects Section - Exact from Arch-Canvas -->
+      <section id="projects" class="py-32 bg-background relative z-20">
+        <div class="container mx-auto px-6">
+          <div class="flex justify-start items-end mb-24">
+            <div>
+              <h2 class="text-4xl md:text-6xl font-display uppercase font-bold text-white mb-4">
+                Works
+              </h2>
+              <div class="h-1 w-24 bg-white" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-y-24">
+            <!-- The Void House -->
+            <div class="group cursor-pointer animate-in">
+              <div class="relative overflow-hidden mb-6 aspect-[4/5] md:aspect-[3/4]">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-500 z-10" />
+                <img
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+                  alt="The Void House"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex justify-between items-start border-t border-white/10 pt-6">
+                <div>
+                  <h3 class="text-2xl font-display uppercase mb-1 text-white group-hover:text-primary transition-colors">
+                    The Void House
+                  </h3>
+                  <p class="text-muted-foreground font-mono text-sm">
+                    Residential
+                  </p>
+                </div>
+                <span class="text-muted-foreground font-mono text-sm">
+                  2024
+                </span>
+              </div>
+            </div>
+
+            <!-- Project Alpha -->
+            <div class="group cursor-pointer md:translate-y-24 animate-in">
+              <div class="relative overflow-hidden mb-6 aspect-[4/5] md:aspect-[3/4]">
+                <div class="absolute inset-0 bg-black/60 z-20 flex items-center justify-center">
+                  <span class="text-white text-xs uppercase tracking-[0.5em] border border-white/20 px-6 py-2">Coming Soon</span>
+                </div>
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-500 z-10" />
+                <img
+                  src="/images/project1.jpg"
+                  alt="Project Alpha"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex justify-between items-start border-t border-white/10 pt-6">
+                <div>
+                  <h3 class="text-2xl font-display uppercase mb-1 text-white group-hover:text-primary transition-colors">
+                    Project Alpha
+                  </h3>
+                  <p class="text-muted-foreground font-mono text-sm">
+                    Commercial
+                  </p>
+                </div>
+                <span class="text-muted-foreground font-mono text-sm">
+                  2025
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
