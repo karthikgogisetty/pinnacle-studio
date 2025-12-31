@@ -57,68 +57,34 @@
       </div>
     </div>
 
-    <main class="bg-background min-h-screen text-foreground selection:bg-white selection:text-black">
+    <main class="min-h-screen">
       <!-- Projects Section - Exact from Arch-Canvas -->
-      <section id="projects" class="py-32 bg-background relative z-20">
-        <div class="container mx-auto px-6">
-          <div class="flex justify-start items-end mb-24">
-            <div>
-              <h2 class="text-4xl md:text-6xl font-display uppercase font-bold text-white mb-4">
-                Works
-              </h2>
-              <div class="h-1 w-24 bg-white" />
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-y-24">
-            <!-- The Void House -->
-            <div class="group cursor-pointer animate-in">
-              <div class="relative overflow-hidden mb-6 aspect-[4/5] md:aspect-[3/4]">
-                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-500 z-10" />
+      <section id="projects" class="pt-20 bg-background relative">
+        <div class="container">
+          <div class="projects-grid">
+            <!-- Single Project - Coming Soon -->
+            <div class="project-card animate-in">
+              <div class="project-image-container">
+                <div class="project-coming-soon">
+                  <span class="coming-soon-text">Coming Soon</span>
+                </div>
+                <div class="project-image-overlay" />
                 <img
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
-                  alt="The Void House"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src="/images/project3.jpg"
+                  alt="Featured Project"
+                  class="project-image"
                 />
               </div>
-              <div class="flex justify-between items-start border-t border-white/10 pt-6">
+              <div class="project-info">
                 <div>
-                  <h3 class="text-2xl font-display uppercase mb-1 text-white group-hover:text-primary transition-colors">
-                    The Void House
+                  <h3 class="project-title">
+                    Featured Project
                   </h3>
-                  <p class="text-muted-foreground font-mono text-sm">
-                    Residential
+                  <p class="project-type">
+                    Architectural Design
                   </p>
                 </div>
-                <span class="text-muted-foreground font-mono text-sm">
-                  2024
-                </span>
-              </div>
-            </div>
-
-            <!-- Project Alpha -->
-            <div class="group cursor-pointer md:translate-y-24 animate-in">
-              <div class="relative overflow-hidden mb-6 aspect-[4/5] md:aspect-[3/4]">
-                <div class="absolute inset-0 bg-black/60 z-20 flex items-center justify-center">
-                  <span class="text-white text-xs uppercase tracking-[0.5em] border border-white/20 px-6 py-2">Coming Soon</span>
-                </div>
-                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-500 z-10" />
-                <img
-                  src="/images/project1.jpg"
-                  alt="Project Alpha"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-              <div class="flex justify-between items-start border-t border-white/10 pt-6">
-                <div>
-                  <h3 class="text-2xl font-display uppercase mb-1 text-white group-hover:text-primary transition-colors">
-                    Project Alpha
-                  </h3>
-                  <p class="text-muted-foreground font-mono text-sm">
-                    Commercial
-                  </p>
-                </div>
-                <span class="text-muted-foreground font-mono text-sm">
+                <span class="project-year">
                   2025
                 </span>
               </div>
