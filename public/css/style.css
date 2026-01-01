@@ -165,7 +165,9 @@ body {
   border: none;
   cursor: pointer;
   gap: 4px;
-  padding: 0;
+  padding: 0.5rem;
+  z-index: 1000;
+  position: relative;
 }
 
 .hamburger span {
@@ -199,14 +201,16 @@ body {
 
 .close-btn {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 2rem;
+  right: 2rem;
   background: none;
   border: none;
   color: hsl(var(--foreground));
   font-size: 2rem;
   cursor: pointer;
   padding: 0.5rem;
+  z-index: 1001;
+  line-height: 1;
 }
 
 .mobile-nav-links {
