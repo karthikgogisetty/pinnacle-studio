@@ -20,6 +20,7 @@ app.use(helmet({
       imgSrc: ["'self'", "data:", "https:"],
       scriptSrc: ["'self'"],
       connectSrc: ["'self'"],
+      formAction: ["'self'", "https://formspree.io"],
     },
   },
 }));
