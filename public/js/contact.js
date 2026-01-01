@@ -18,6 +18,8 @@ document.getElementById('contactForm').addEventListener('submit', async function
   formMessage.classList.add('hidden');
   
   try {
+    console.log('Sending contact form data:', formData);
+    
     const response = await fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -26,7 +28,11 @@ document.getElementById('contactForm').addEventListener('submit', async function
       body: JSON.stringify(formData)
     });
     
+    console.log('Response status:', response.status);
+    console.log('Response ok:', response.ok);
+    
     const result = await response.json();
+    console.log('Response data:', result);
     
     if (result.success) {
       // Show success message
@@ -43,6 +49,10 @@ document.getElementById('contactForm').addEventListener('submit', async function
       formMessage.classList.remove('hidden');
     }
   } catch (error) {
+    console.error('Network error details:', error);
+    console.error('Error message:', error.message);
+    console.error('Error stack:', error.stack);
+    
     // Show error message
     formMessage.textContent = 'Network error. Please try again.';
     formMessage.className = 'mt-4 text-center text-red-400 uppercase tracking-widest text-sm';
